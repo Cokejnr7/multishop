@@ -14,6 +14,7 @@ module.exports = {
         marko: "#3D464D",
         sunGlow: "#FFD333",
         paleSky: "#6C757D",
+        hGallery: "#ECECEC",
       },
     },
   },

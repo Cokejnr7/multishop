@@ -1,6 +1,8 @@
+import classNames from "classnames";
+
 const Container = ({ children, className }) => {
-    
-  return <div className="container">{children}</div>;
+  const classes = classNames("container mx-auto", className);
+  return <div className={classes}>{children}</div>;
 };
 
 export default Container;

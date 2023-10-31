@@ -1,11 +1,17 @@
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Container from "./Container";
-// GoTriangleDown
+import {
+  GoTriangleDown,
+  GoChevronDown,
+  GoListUnordered,
+  GoSearch,
+} from "react-icons/go";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
   return (
     <div>
-      <div className="bg-wildSand py-3">
+      <div className="bg-wildSand py-1">
         <Container className="flex items-center justify-between">
           <ul className="flex gap-x-3">
             <li className="text-paleSky">About</li>
@@ -13,10 +19,85 @@ const Header = () => {
             <li className="text-paleSky">Help</li>
             <li className="text-paleSky">FAQs</li>
           </ul>
-          <span className="bg-white p-2">My Account</span>
+          <div className="bg-white p-2 flex items-center gap-1 hover:bg-hGallery cursor-pointer">
+            <span>My Account </span>
+            <GoTriangleDown />
+          </div>
         </Container>
       </div>
-      <Navbar />
+
+      <div className="py-4 bg-marko lg:bg-white">
+        <Container className="flex justify-between items-center">
+          {/* logo */}
+          <div>
+            <span className="text-marko lg:text-sunGlow bg-white lg:bg-marko text-3xl font-bold px-2 py-1">
+              MULTI
+            </span>
+            <span className="text-white lg:text-marko bg-sunGlow  text-3xl font-bold px-2 py-1">
+              SHOP
+            </span>
+          </div>
+
+          {/* search bar */}
+          <div className="hidden lg:flex w-1/4 ">
+            <input
+              type="text"
+              className="border border-ghost p-2 grow focus:outline-none focus:border-sunGlow"
+              placeholder="Search for products"
+            />
+            <button className="border border-ghost px-2">
+              <GoSearch className="text-sunGlow text-xl font-extrabold" />
+            </button>
+          </div>
+
+          {/* customer service */}
+          <div className="hidden lg:flex flex-col items-center">
+            <span className="text-paleSky">Customer Service</span>
+            <span className="font-semibold text-xl text-marko">
+              +012 345 6789
+            </span>
+          </div>
+        </Container>
+      </div>
+
+      {/* navbar */}
+      <nav className="bg-marko hidden lg:block">
+        <Container className="flex justify-between items-center">
+          <div className="flex gap-x-8">
+            <div className="bg-sunGlow py-5 px-2 flex items-center gap-x-14 cursor-pointer">
+              <div className="flex items-center gap-2">
+                <GoListUnordered className="text-lg" />
+                <span className="font-semibold text-marko text-lg">
+                  Categories
+                </span>
+              </div>
+              <GoChevronDown className="text-lg text-marko" />
+            </div>
+            <ul className="flex items-center gap-x-4">
+              <li className="text-wildSand hover:text-sunGlow cursor-pointer">
+                Home
+              </li>
+              <li className="text-wildSand hover:text-sunGlow cursor-pointer">
+                Shop
+              </li>
+              <li className="text-wildSand hover:text-sunGlow cursor-pointer">
+                pages
+              </li>
+              <li className="text-wildSand hover:text-sunGlow cursor-pointer">
+                Contact
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex">
+            <div>
+              <FaShoppingCart className="text-sunGlow text-lg" />
+            </div>
+            <div></div>
+          </div>
+        </Container>
+      </nav>
+      {/* <Navbar /> */}
     </div>
   );
 };

@@ -4,7 +4,30 @@
 
 
 @layer base {
-  body {
-    min-width: 375px;
+  html, body, #root {
+    height: 100%;
+    width: 100%;
   }
+
+  body {
+    min-width: 320px;
+    max-width: 100%;
+  }
+
+  body, #root, .app {
+    min-height: 100%;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* footer {
+    margin-top: auto;
+  } */
+
+
+
+
 }

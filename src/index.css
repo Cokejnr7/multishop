@@ -27,7 +27,9 @@
     margin-top: auto;
   } */
 
-
+  .divider {
+    height: 0.1px;
+  }
 
 
 }

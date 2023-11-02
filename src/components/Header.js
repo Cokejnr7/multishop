@@ -39,14 +39,14 @@ const Header = () => {
           </div>
 
           {/* search bar */}
-          <div className="hidden lg:flex w-1/4 ">
+          <div className="hidden lg:flex w-1/3 ">
             <input
               type="text"
               className="border border-ghost p-2 grow focus:outline-none focus:border-sunGlow"
               placeholder="Search for products"
             />
             <button className="border border-ghost px-2">
-              <GoSearch className="text-sunGlow text-xl font-extrabold" />
+              <GoSearch className="text-sunGlow text-lg font-extrabold" />
             </button>
           </div>
 

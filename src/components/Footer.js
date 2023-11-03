@@ -70,9 +70,17 @@ const Footer = () => {
           <span className="font-semibold text-wildSand text-xl">
             NEWSLETTER
           </span>
-          <div>
+          <div className="flex flex-col gap-y-4">
             <span className="block text-wildSand max-w-xs">
               Duo stet tempor ipsum sit amet magna ipsum tempor est
+            </span>
+            <span className="flex">
+              <input
+                type="text"
+                className="p-2"
+                placeholder="Your Email Address"
+              />
+              <button className="bg-sunGlow px-3 text-marko">Sign Up</button>
             </span>
           </div>
           <div className="flex flex-col gap-y-4 ">

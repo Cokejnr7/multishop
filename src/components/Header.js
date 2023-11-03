@@ -12,15 +12,15 @@ const Header = () => {
   return (
     <div>
       <div className="bg-wildSand py-1">
-        <Container className="flex items-center justify-between">
-          <ul className="flex gap-x-3">
+        <Container className="flex items-center justify-center lg:justify-between">
+          <ul className="lg:flex gap-x-3 hidden">
             <li className="text-paleSky">About</li>
             <li className="text-paleSky">Contact</li>
             <li className="text-paleSky">Help</li>
             <li className="text-paleSky">FAQs</li>
           </ul>
-          <div className="bg-white p-2 flex items-center gap-1 hover:bg-hGallery cursor-pointer">
-            <span>My Account </span>
+          <div className="bg-white px-2 py-1 flex items-center gap-1 hover:bg-hGallery cursor-pointer">
+            <span className="text-sm">My Account </span>
             <GoTriangleDown />
           </div>
         </Container>

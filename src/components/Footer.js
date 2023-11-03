@@ -4,49 +4,78 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaTwitter,
+  FaLocationDot,
+  FaPhone,
 } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
   return (
     <footer className="bg-marko mt-auto">
-      <Container className="p-10 flex flex-wrap gap-y-10 justify-between">
+      <Container className="pt-20 flex flex-col md:flex-row flex-wrap gap-y-10 justify-between">
         {/* address */}
-        <div>
-          <span className="font-semibold text-wildSand text-lg ">
+        <div className="flex flex-col gap-y-6">
+          <span className="font-semibold text-wildSand text-xl ">
             GET IN TOUCH
           </span>
-          <div>
+
+          <div className="flex flex-col gap-y-6">
             <span className="block text-wildSand lg:max-w-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium cum iusto tempore eius omnis aliquid quam magnam
-              ducimus dolor.
+              No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et
+              et dolor sed dolor. Rebum tempor no vero est magna amet no
             </span>
+
+            <address className="flex flex-col gap-y-2 not-italic">
+              <span className="flex gap-x-4 items-center">
+                <FaLocationDot className="text-sunGlow" />
+                <span className="text-wildSand">123 Street, New York, USA</span>
+              </span>
+              <span className="flex gap-x-4 items-center">
+                <IoMdMail className="text-sunGlow" />
+                <span className="text-wildSand">info@example.com</span>
+              </span>
+              <span className="flex gap-x-4 items-center">
+                <FaPhone className="text-sunGlow" />
+                <span className="text-wildSand">+012 345 67890</span>
+              </span>
+            </address>
           </div>
         </div>
 
-        <div>
-          <span className="font-semibold text-wildSand text-lg">
+        <div className="flex flex-col gap-y-6">
+          <span className="font-semibold text-wildSand text-xl">
             QUICK SHOP
           </span>
+          <ul className="flex flex-col gap-y-1">
+            <li className="text-wildSand">Home</li>
+            <li className="text-wildSand">Our Shop</li>
+            <li className="text-wildSand">Shopping Cart</li>
+            <li className="text-wildSand">Checkout</li>
+            <li className="text-wildSand">Contact us</li>
+          </ul>
         </div>
 
-        <div>
-          <span className="font-semibold text-wildSand text-lg">
+        <div className="flex flex-col gap-y-6">
+          <span className="font-semibold text-wildSand text-xl">
             MY ACCOUNT
           </span>
+          <ul className="flex flex-col gap-y-1">
+            <li className="text-wildSand">Sign in</li>
+            <li className="text-wildSand">Sign up</li>
+          </ul>
         </div>
 
         {/* newsletter */}
-        <div>
-          <span className="font-semibold text-wildSand text-lg">
+        <div className="flex flex-col gap-y-6">
+          <span className="font-semibold text-wildSand text-xl">
             NEWSLETTER
           </span>
           <div>
-            <span className="text-wildSand">
+            <span className="block text-wildSand max-w-xs">
               Duo stet tempor ipsum sit amet magna ipsum tempor est
             </span>
           </div>
-          <div className="flex flex-col gap-3 ">
+          <div className="flex flex-col gap-y-4 ">
             <span className="text-wildSand text-md font-semibold">
               FOLLOW US
             </span>
@@ -68,8 +97,15 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      <Container className="p-3">
+      <Container className="p-6">
         <div className="w-full divider bg-paleSky"></div>
+
+        <div>
+          <span className="text-wildSand">
+            © <span className="text-sunGlow">Domain</span>. All Rights Reserved.
+            Designed by <span className="text-sunGlow">HTML Codex</span>
+          </span>
+        </div>
       </Container>
     </footer>
   );

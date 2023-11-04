@@ -77,7 +77,7 @@ const Footer = () => {
             <span className="flex">
               <input
                 type="text"
-                className="p-2"
+                className="p-2 outline-none focus:border focus:border-butterMilk"
                 placeholder="Your Email Address"
               />
               <button className="bg-sunGlow px-3 text-marko">Sign Up</button>
@@ -111,7 +111,15 @@ const Footer = () => {
         <div>
           <span className="text-wildSand">
             © <span className="text-sunGlow">Domain</span>. All Rights Reserved.
-            Designed by <span className="text-sunGlow">HTML Codex</span>
+            Designed by{" "}
+            <a
+              href="https://htmlcodex.com"
+              className="text-sunGlow hover:text-corn hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              HTML Codex
+            </a>
           </span>
         </div>
       </Container>

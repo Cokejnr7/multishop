@@ -45,14 +45,20 @@ const Header = () => {
             <div
               className={`absolute top-[100%] ${
                 isExpanded ? "flex flex-col" : "hidden"
-              } border border-wildSand px-6 py-3  bg-white right-0 w-[150%]`}
+              } border border-wildSand bg-white right-0 w-[150%] `}
             >
-              <span>
-                <Link to="/account/login">Sign in</Link>
-              </span>
-              <span>
-                <Link to="/account/register">sign up</Link>
-              </span>
+              <Link
+                to="/account/login"
+                className="hover:bg-hGallery px-6 py-1 "
+              >
+                Sign in
+              </Link>
+              <Link
+                to="/account/register"
+                className="hover:bg-hGallery px-6 py-1"
+              >
+                Sign up
+              </Link>
             </div>
           </div>
         </Container>

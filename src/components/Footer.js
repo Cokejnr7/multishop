@@ -48,11 +48,21 @@ const Footer = () => {
             QUICK SHOP
           </span>
           <ul className="flex flex-col gap-y-1">
-            <li className="text-wildSand">Home</li>
-            <li className="text-wildSand">Our Shop</li>
-            <li className="text-wildSand">Shopping Cart</li>
-            <li className="text-wildSand">Checkout</li>
-            <li className="text-wildSand">Contact us</li>
+            <li className="text-wildSand">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="text-wildSand">
+              <Link to="/shop">Our Shop</Link>
+            </li>
+            <li className="text-wildSand">
+              <Link to="/cart">Shopping Cart</Link>
+            </li>
+            <li className="text-wildSand">
+              <Link to="/checkout">Checkout</Link>
+            </li>
+            <li className="text-wildSand">
+              <Link to="/contact">Contact us</Link>
+            </li>
           </ul>
         </div>
 

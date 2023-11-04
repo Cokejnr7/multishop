@@ -3,6 +3,7 @@ import Search from "./Search";
 import { useState, useEffect, useRef } from "react";
 import Container from "./Container";
 import { GoTriangleDown } from "react-icons/go";
+import Link from "./Link";
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -46,8 +47,12 @@ const Header = () => {
                 isExpanded ? "flex flex-col" : "hidden"
               } border border-wildSand px-6 py-3  bg-white right-0 w-[150%]`}
             >
-              <span>Sign in</span>
-              <span>Sign up</span>
+              <span>
+                <Link to="/account/login">Sign in</Link>
+              </span>
+              <span>
+                <Link to="/account/register">sign up</Link>
+              </span>
             </div>
           </div>
         </Container>

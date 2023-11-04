@@ -8,6 +8,7 @@ import {
   FaPhone,
 } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import Link from "./Link";
 
 const Footer = () => {
   return (
@@ -60,8 +61,12 @@ const Footer = () => {
             MY ACCOUNT
           </span>
           <ul className="flex flex-col gap-y-1">
-            <li className="text-wildSand">Sign in</li>
-            <li className="text-wildSand">Sign up</li>
+            <li className="text-wildSand">
+              <Link to="/account/login">Sign in</Link>
+            </li>
+            <li className="text-wildSand">
+              <Link to="/account/register">Sign up</Link>
+            </li>
           </ul>
         </div>
 

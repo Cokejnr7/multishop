@@ -122,8 +122,9 @@ const Header = () => {
           </div>
 
           <div className="flex">
-            <div>
+            <div className="flex items-center gap-x-1">
               <FaShoppingCart className="text-sunGlow text-lg" />
+              <span className="text-wildSand border cart__num text-xs">0</span>
             </div>
             <div></div>
           </div>

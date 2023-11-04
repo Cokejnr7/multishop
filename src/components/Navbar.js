@@ -1,6 +1,7 @@
 import Container from "./Container";
 import { GoChevronDown, GoListUnordered } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
+import Link from "./Link";
 
 const Navbar = () => {
   return (
@@ -18,16 +19,16 @@ const Navbar = () => {
           </div>
           <ul className="flex items-center gap-x-4">
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
-              Home
+              <Link to="/">Home</Link>
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
-              Shop
+              <Link to="/shop">Shop</Link>
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
               pages
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
-              Contact
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

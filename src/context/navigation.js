@@ -9,6 +9,7 @@ const NavigationProvider = ({ children }) => {
     const handler = () => {
       setPath(window.location.pathname);
     };
+
     window.addEventListener("popstate", handler);
     return () => {
       window.removeEventListener("popstate", handler);

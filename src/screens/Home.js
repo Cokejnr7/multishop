@@ -7,13 +7,9 @@ const Home = () => {
   return (
     <main>
       <Container className="pt-6 pb-24 flex flex-col gap-y-24">
-        Home Page
-        <div>
-          <CategoryItem />
-        </div>
-        <div>
-          <ProductList />
-        </div>
+        <CategoryItem />
+        <ProductList headerName="FEATURED PRODUCTS" />
+        <ProductList headerName="RECENT PRODUCTS" />
       </Container>
     </main>
   );

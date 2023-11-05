@@ -1,14 +1,10 @@
 import ProductItem from "./ProductItem";
+import Heading from "./Heading";
 
-const ProductList = () => {
+const ProductList = ({ headerName }) => {
   return (
     <div className="flex flex-col gap-y-6">
-      <div className="flex items-center gap-x-6">
-        <h2 className="text-3xl font-bold text-marko sub__heading">
-          FEATURED PRODUCTS
-        </h2>
-        <span className="border-b-2 h-1 grow border-dashed "></span>
-      </div>
+      {headerName && <Heading name={headerName} />}
       <div className="product__list">
         <ProductItem />
         <ProductItem />

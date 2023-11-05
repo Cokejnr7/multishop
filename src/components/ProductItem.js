@@ -3,7 +3,7 @@ import { FaStarHalf, FaStar } from "react-icons/fa6";
 
 const ProductItem = () => {
   return (
-    <div className="bg-white max-w-xs item__shadow ">
+    <div className="bg-white item__shadow ">
       <div className="overflow-hidden">
         <img
           src={ProductImg}

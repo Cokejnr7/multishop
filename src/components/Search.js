@@ -7,10 +7,10 @@ const Search = () => {
       <Container className="flex justify-between items-center">
         {/* logo */}
         <div>
-          <span className="text-marko lg:text-sunGlow bg-white lg:bg-marko text-3xl font-bold px-2 py-1">
+          <span className="text-marko lg:text-sunGlow bg-white lg:bg-marko text-4xl font-bold px-2 py-1">
             MULTI
           </span>
-          <span className="text-white lg:text-marko bg-sunGlow  text-3xl font-bold px-2 py-1">
+          <span className="text-white lg:text-marko bg-sunGlow  text-4xl font-bold px-2 py-1">
             SHOP
           </span>
         </div>

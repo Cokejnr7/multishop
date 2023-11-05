@@ -1,6 +1,7 @@
 import Container from "../components/Container";
 import ProductItem from "../components/ProductItem";
 import CategoryItem from "../components/CategoryItem";
+import ProductList from "../components/ProductList";
 
 const Home = () => {
   return (
@@ -11,13 +12,7 @@ const Home = () => {
           <CategoryItem />
         </div>
         <div>
-          <ProductItem />
-        </div>
-        <div>
-          <ProductItem />
-        </div>
-        <div>
-          <ProductItem />
+          <ProductList />
         </div>
       </Container>
     </main>

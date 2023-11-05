@@ -48,20 +48,30 @@ const Footer = () => {
             QUICK SHOP
           </span>
           <ul className="flex flex-col gap-y-1">
-            <li className="text-wildSand">
-              <Link to="/">Home</Link>
+            <li>
+              <Link to="/" className="text-wildSand hover:text-paleSky">
+                Home
+              </Link>
             </li>
-            <li className="text-wildSand">
-              <Link to="/shop">Our Shop</Link>
+            <li>
+              <Link to="/shop" className="text-wildSand hover:text-paleSky">
+                Our Shop
+              </Link>
             </li>
-            <li className="text-wildSand">
-              <Link to="/cart">Shopping Cart</Link>
+            <li>
+              <Link to="/cart" className="text-wildSand hover:text-paleSky">
+                Shopping Cart
+              </Link>
             </li>
-            <li className="text-wildSand">
-              <Link to="/checkout">Checkout</Link>
+            <li>
+              <Link to="/checkout" className="text-wildSand hover:text-paleSky">
+                Checkout
+              </Link>
             </li>
-            <li className="text-wildSand">
-              <Link to="/contact">Contact us</Link>
+            <li>
+              <Link to="/contact" className="text-wildSand hover:text-paleSky">
+                Contact us
+              </Link>
             </li>
           </ul>
         </div>
@@ -71,11 +81,21 @@ const Footer = () => {
             MY ACCOUNT
           </span>
           <ul className="flex flex-col gap-y-1">
-            <li className="text-wildSand">
-              <Link to="/account/login">Sign in</Link>
+            <li>
+              <Link
+                to="/account/login"
+                className="text-wildSand hover:text-paleSky"
+              >
+                Sign in
+              </Link>
             </li>
-            <li className="text-wildSand">
-              <Link to="/account/register">Sign up</Link>
+            <li>
+              <Link
+                to="/account/register"
+                className="text-wildSand hover:text-paleSky"
+              >
+                Sign up
+              </Link>
             </li>
           </ul>
         </div>

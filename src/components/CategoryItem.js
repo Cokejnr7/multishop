@@ -1,14 +1,8 @@
-import { useState } from "react";
+import useHover from "../hooks/hover";
 import CategoryImg from "./cat-2.jpg";
 
 const CategoryItem = () => {
-  const [hoverState, setHoverState] = useState(false);
-
-  const handleHover = () => {
-    setHoverState((currentState) => !currentState);
-  };
-
-  const hoverClass = hoverState && "scale-125 skew-y-3";
+  const { handleHover, hoverClass } = useHover("scale-125 skew-y-3");
 
   return (
     <div

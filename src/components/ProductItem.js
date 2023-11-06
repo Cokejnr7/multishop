@@ -1,15 +1,9 @@
-import { useState } from "react";
+import useHover from "../hooks/hover";
 import ProductImg from "./product-2.jpg";
 import { FaStarHalf, FaStar } from "react-icons/fa6";
 
 const ProductItem = () => {
-  const [hoverState, setHoverState] = useState(false);
-
-  const handleHover = () => {
-    setHoverState((currentState) => !currentState);
-  };
-
-  const hoverClass = hoverState && "opacity-50 scale-125";
+  const { handleHover, hoverClass } = useHover("opacity-50 scale-125");
 
   return (
     <div

@@ -1,14 +1,27 @@
+import { useState } from "react";
 import ProductImg from "./product-2.jpg";
 import { FaStarHalf, FaStar } from "react-icons/fa6";
 
 const ProductItem = () => {
+  const [hoverState, setHoverState] = useState(false);
+
+  const handleHover = () => {
+    setHoverState((currentState) => !currentState);
+  };
+
+  const hoverClass = hoverState && "opacity-50 scale-125";
+
   return (
-    <div className="bg-white item__shadow ">
+    <div
+      className="bg-white item__shadow "
+      onMouseEnter={handleHover}
+      onMouseLeave={handleHover}
+    >
       <div className="overflow-hidden">
         <img
           src={ProductImg}
           alt="product"
-          className="hover:scale-125 transition duration-500 hover:opacity-50 "
+          className={`transition duration-500 ${hoverClass}`}
         />
       </div>
       <div className="flex flex-col gap-y-2 items-center py-6">

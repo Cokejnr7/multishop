@@ -3,9 +3,12 @@ import CategoryImg from "./cat-2.jpg";
 
 const CategoryItem = () => {
   const [hoverState, setHoverState] = useState(false);
+
   const handleHover = () => {
     setHoverState((currentState) => !currentState);
   };
+
+  const hoverClass = hoverState && "scale-125 skew-y-3";
 
   return (
     <div
@@ -17,9 +20,7 @@ const CategoryItem = () => {
         <img
           src={CategoryImg}
           alt="category"
-          className={`w-28 h-full transition duration-500 ${
-            hoverState && "scale-125 skew-y-3"
-          }`}
+          className={`w-28 h-full transition duration-500 ${hoverClass}`}
         />
       </div>
       <div className="flex flex-col justify-center">

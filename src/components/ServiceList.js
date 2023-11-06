@@ -5,22 +5,23 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import React from "react";
 
 const ServiceList = () => {
+  const iconClasses = "text-sunGlow text-5xl";
   const services = [
     {
       name: "Quality Products",
-      icon: <FaShippingFast className="text-sunGlow text-5xl" />,
+      icon: <FaShippingFast className={iconClasses} />,
     },
     {
       name: "Free Shipping",
-      icon: <FaCheck className="text-sunGlow text-5xl" />,
+      icon: <FaCheck className={iconClasses} />,
     },
     {
       name: "14-Day Return",
-      icon: <FaArrowRightArrowLeft className="text-sunGlow text-5xl" />,
+      icon: <FaArrowRightArrowLeft className={iconClasses} />,
     },
     {
       name: "24/7 Support",
-      icon: <BiSolidPhoneCall className="text-sunGlow text-5xl" />,
+      icon: <BiSolidPhoneCall className={iconClasses} />,
     },
   ];
 

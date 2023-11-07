@@ -1,9 +1,13 @@
 import Container from "./Container";
+import useHover from "../hooks/hover";
+import { RiArrowDownSLine } from "react-icons/ri";
 import { GoChevronDown, GoListUnordered } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
 import Link from "./Link";
 
 const Navbar = () => {
+  const { handleHover, hoverClass } = useHover("flex");
+
   return (
     <nav className="bg-marko hidden lg:block">
       <Container className="flex justify-between items-center">
@@ -15,7 +19,7 @@ const Navbar = () => {
                 Categories
               </span>
             </div>
-            <GoChevronDown className="text-lg text-marko" />
+            <RiArrowDownSLine className="text-lg text-marko" />
           </div>
           <ul className="flex items-center gap-x-4">
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
@@ -24,8 +28,9 @@ const Navbar = () => {
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
               <Link to="/shop">Shop</Link>
             </li>
-            <li className="text-wildSand hover:text-sunGlow cursor-pointer">
-              pages
+            <li className="text-wildSand group cursor-pointer flex items-center">
+              <span className="group-hover:text-sunGlow">pages</span>
+              <RiArrowDownSLine className="text-white text-lg self-end group-hover:text-sunGlow" />
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
               <Link to="/contact">Contact</Link>

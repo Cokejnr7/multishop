@@ -1,12 +1,12 @@
 import Container from "./Container";
-import useHover from "../hooks/hover";
+import useClick from "../hooks/click";
 import { RiArrowDownSLine } from "react-icons/ri";
-import { GoChevronDown, GoListUnordered } from "react-icons/go";
+import { GoListUnordered } from "react-icons/go";
 import { FaShoppingCart } from "react-icons/fa";
 import Link from "./Link";
 
 const Navbar = () => {
-  const { handleHover, hoverClass } = useHover("flex");
+  const { ref, isExpanded } = useClick();
 
   return (
     <nav className="bg-marko hidden lg:block">
@@ -28,9 +28,24 @@ const Navbar = () => {
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
               <Link to="/shop">Shop</Link>
             </li>
-            <li className="text-wildSand group cursor-pointer flex items-center">
+            <li
+              className="text-wildSand group cursor-pointer flex items-center relative"
+              ref={ref}
+            >
               <span className="group-hover:text-sunGlow">pages</span>
               <RiArrowDownSLine className="text-white text-lg self-end group-hover:text-sunGlow" />
+              <div
+                className={`absolute py-1 top-11 bg-sunGlow w-36 ${
+                  isExpanded ? "flex flex-col" : "hidden"
+                }`}
+              >
+                <span className="px-5 py-1 text-black hover:bg-wildSand">
+                  Shopping Cart
+                </span>
+                <span className="px-5 py-1 text-black hover:bg-wildSand">
+                  Checkout
+                </span>
+              </div>
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
               <Link to="/contact">Contact</Link>

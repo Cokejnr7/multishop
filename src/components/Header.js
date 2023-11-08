@@ -1,29 +1,12 @@
 import Navbar from "./Navbar";
 import Search from "./Search";
-import { useState, useEffect, useRef } from "react";
+import useClick from "../hooks/click";
 import Container from "./Container";
 import { GoTriangleDown } from "react-icons/go";
 import Link from "./Link";
 
 const Header = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const ref = useRef();
-
-  const handleClick = (e) => {
-    if (ref.current.contains(e.target)) {
-      setIsExpanded((currentVal) => !currentVal);
-    } else {
-      setIsExpanded(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("click", handleClick, true);
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, []);
-
+  const { ref, isExpanded } = useClick();
   return (
     <div>
       <div className="bg-wildSand py-1">

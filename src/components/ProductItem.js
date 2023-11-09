@@ -25,7 +25,7 @@ const ProductItem = () => {
           <s className="text-paleSky text-sm font-semibold">$150.00</s>
         </span>
         <span className="flex items-center gap-x-1">
-          <Rating />
+          <Rating rate={4.5} />
           <span className="text-paleSky text-sm">(90)</span>
         </span>
       </div>

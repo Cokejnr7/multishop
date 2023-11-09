@@ -39,12 +39,18 @@ const Navbar = () => {
                   isExpanded ? "flex flex-col" : "hidden"
                 }`}
               >
-                <span className="px-5 py-1 text-black hover:bg-wildSand">
+                <Link
+                  to="/cart"
+                  className="px-5 py-1 text-black hover:bg-wildSand"
+                >
                   Shopping Cart
-                </span>
-                <span className="px-5 py-1 text-black hover:bg-wildSand">
+                </Link>
+                <Link
+                  to="/checkout"
+                  className="px-5 py-1 text-black hover:bg-wildSand"
+                >
                   Checkout
-                </span>
+                </Link>
               </div>
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">

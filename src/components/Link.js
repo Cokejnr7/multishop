@@ -2,10 +2,13 @@ import { useContext } from "react";
 import { NavigationContext } from "../context/navigation";
 import classNames from "classnames";
 
-const Link = ({ to, children, className }) => {
+const Link = ({ to, children, className, activeLink }) => {
   const { navigate, currentPath } = useContext(NavigationContext);
 
-  const classes = classNames(className, currentPath === to && "text-sunGlow");
+  const classes = classNames(
+    className,
+    currentPath === to && activeLink && "text-sunGlow"
+  );
 
   const handleClick = (e) => {
     if (e.metaKey || e.ctrlKey) return;

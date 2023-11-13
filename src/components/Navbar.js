@@ -23,10 +23,14 @@ const Navbar = () => {
           </div>
           <ul className="flex items-center gap-x-4">
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
-              <Link to="/">Home</Link>
+              <Link to="/" activeLink>
+                Home
+              </Link>
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
-              <Link to="/shop">Shop</Link>
+              <Link to="/shop" activeLink>
+                Shop
+              </Link>
             </li>
             <li
               className="text-wildSand group cursor-pointer flex items-center relative"
@@ -42,19 +46,23 @@ const Navbar = () => {
                 <Link
                   to="/cart"
                   className="px-5 py-1 text-black hover:bg-wildSand"
+                  activeLink
                 >
                   Shopping Cart
                 </Link>
                 <Link
                   to="/checkout"
                   className="px-5 py-1 text-black hover:bg-wildSand"
+                  activeLink
                 >
                   Checkout
                 </Link>
               </div>
             </li>
             <li className="text-wildSand hover:text-sunGlow cursor-pointer">
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" activeLink>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

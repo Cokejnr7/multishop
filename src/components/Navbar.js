@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="bg-marko hidden lg:block">
       <Container className="flex justify-between items-center">
         <div className="flex gap-x-8">
-          <div className="bg-sunGlow py-5 px-2 flex items-center gap-x-14 cursor-pointer">
+          <div className="bg-sunGlow py-4 px-6 flex items-center gap-x-14 cursor-pointer">
             <div className="flex items-center gap-2">
               <GoListUnordered className="text-lg" />
               <span className="font-semibold text-marko text-lg">
@@ -39,21 +39,19 @@ const Navbar = () => {
               <span className="group-hover:text-sunGlow">pages</span>
               <RiArrowDownSLine className="text-white text-lg self-end group-hover:text-sunGlow" />
               <div
-                className={`absolute py-1 top-11 bg-sunGlow w-36 ${
+                className={`absolute py-2 top-11 bg-sunGlow w-36 ${
                   isExpanded ? "flex flex-col" : "hidden"
                 }`}
               >
                 <Link
                   to="/cart"
                   className="px-5 py-1 text-black hover:bg-wildSand"
-                  activeLink
                 >
                   Shopping Cart
                 </Link>
                 <Link
                   to="/checkout"
                   className="px-5 py-1 text-black hover:bg-wildSand"
-                  activeLink
                 >
                   Checkout
                 </Link>

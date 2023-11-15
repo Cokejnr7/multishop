@@ -39,7 +39,7 @@ const Navbar = () => {
               <span className="group-hover:text-sunGlow">pages</span>
               <RiArrowDownSLine className="text-white text-lg self-end group-hover:text-sunGlow" />
               <div
-                className={`absolute py-2 top-11 bg-sunGlow w-36 ${
+                className={`absolute py-2 top-10 bg-sunGlow w-36 ${
                   isExpanded ? "flex flex-col" : "hidden"
                 }`}
               >

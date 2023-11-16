@@ -10,7 +10,7 @@ const Home = () => {
       <Container className="pt-8 pb-24 flex flex-col gap-y-24">
         <ServiceList />
         <CategoryList />
-        <FeaturedProducts />
+        {/* <FeaturedProducts /> */}
         <RecentProducts />
       </Container>
     </main>

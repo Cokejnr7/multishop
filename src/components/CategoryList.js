@@ -4,7 +4,7 @@ import CategoryItem from "./CategoryItem";
 import Heading from "./Heading";
 
 const CategoryList = () => {
-  const [categories, setCategories] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
+  const [categories, setCategories] = useState([]);
 
   const renderedCategories = categories.map((category) => {
     return (
@@ -19,7 +19,6 @@ const CategoryList = () => {
       const response = await axios.get(
         `http://127.0.0.1:8000/api/store/categories`
       );
-      console.log(response.data);
       setCategories(response.data);
     } catch (err) {
       console.log(err);
@@ -29,6 +28,7 @@ const CategoryList = () => {
   useEffect(() => {
     fetchCategories();
   }, []);
+
   return (
     <div className="flex flex-col gap-y-6">
       <Heading name="Categories" />

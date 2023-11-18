@@ -31,7 +31,7 @@ const CategoryList = () => {
 
   return (
     <div className="flex flex-col gap-y-6">
-      <Heading name="Categories" />
+      <Heading name="CATEGORIES" />
       <div className="__list">{renderedCategories}</div>
     </div>
   );

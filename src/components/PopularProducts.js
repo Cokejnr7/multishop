@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ProductList from "./ProductList";
 
-const FeaturedProducts = () => {
-  const [recentProducts, setRecentProducts] = useState([]);
+const PopularProducts = () => {
+  const [popularProducts, setPopularProducts] = useState([]);
 
   const fetchRecentProducts = async () => {
     try {
@@ -11,7 +11,7 @@ const FeaturedProducts = () => {
         "http://127.0.0.1:8000/api/store/products/recent_products/"
       );
       console.log(response.data);
-      setRecentProducts(response.data);
+      setPopularProducts(response.data);
     } catch (err) {
       console.log(err);
     }
@@ -21,7 +21,9 @@ const FeaturedProducts = () => {
     fetchRecentProducts();
   }, []);
 
-  return <ProductList headerName={"FEATURED PRODUCTS"} />;
+  return (
+    <ProductList products={popularProducts} headerName={"POPULAR PRODUCTS"} />
+  );
 };
 
-export default FeaturedProducts;
+export default PopularProducts;
